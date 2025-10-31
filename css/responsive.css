@@ -1,0 +1,156 @@
+/* =======================
+   ESTILOS RESPONSIVOS
+   ======================= */
+
+/* --- Tablets y pantallas medianas --- */
+@media (max-width: 1024px) {
+
+  .encabezado {
+    padding: 15px 3%;
+  }
+
+  .nav ul {
+    gap: 12px;
+  }
+
+  .hero-texto h2 {
+    font-size: 1.9rem;
+  }
+
+  .descripcion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .descripcion .contenido {
+    order: 2;
+  }
+
+  .descripcion .imagen {
+    order: 1;
+  }
+
+  .form-contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-texto {
+    text-align: center;
+  }
+}
+
+/* --- Móviles (celulares grandes) --- */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #002b49;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav ul.activo {
+    display: flex;
+  }
+
+  .nav a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #002b49;
+  }
+
+  /* HERO */
+  .hero {
+    height: 70vh;
+    padding: 20px;
+  }
+
+  .hero-texto h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero-texto p {
+    font-size: 1rem;
+  }
+
+  /* DESCRIPCIÓN */
+  .descripcion {
+    padding: 60px 4%;
+  }
+
+  .descripcion .contenido h2 {
+    font-size: 1.4rem;
+  }
+
+  /* PLAN DE ESTUDIOS */
+  .plan {
+    padding: 60px 4%;
+  }
+
+  .bloque {
+    width: 100%;
+  }
+
+  /* FORMULARIO */
+  .form {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .footer {
+    font-size: 0.9rem;
+    padding: 20px;
+  }
+}
+
+/* --- Móviles pequeños (celulares < 480px) --- */
+@media (max-width: 480px) {
+
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-texto p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  .descripcion,
+  .perfil,
+  .plan,
+  .formulario {
+    padding: 50px 5%;
+  }
+
+  .bloque h3 {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
