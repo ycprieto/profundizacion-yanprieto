@@ -1,50 +1,52 @@
-/* ===========================
-   SCRIPT PRINCIPAL - UCOMPENSAR
-   =========================== */
+/* ==========================================================
+   SCRIPT PRINCIPAL - Portafolio de Yan Carlos Prieto
+   Loader visible al entrar en cada página + animaciones
+========================================================== */
 
-/* --- MENÚ RESPONSIVO --- */
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navMenu = document.querySelector(".nav ul");
+// ======== PANTALLA DE CARGA ==========
+/*window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  loader.style.display = "flex";
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 800);
+  }, 2000); // tiempo visible del loader
+});*/
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("activo");
-      menuToggle.classList.toggle("abierto");
-    });
-  }
-});
+// ======== ANIMACIONES DE ENTRADA EN SCROLL ==========
+const animatedElements = document.querySelectorAll(".fade-up, .fade-left, .fade-right");
 
-/* --- EFECTO DE DESPLAZAMIENTO SUAVE --- */
-const enlaces = document.querySelectorAll('a[href^="#"]');
-enlaces.forEach((enlace) => {
-  enlace.addEventListener("click", function (e) {
-    e.preventDefault();
-    const destino = document.querySelector(this.getAttribute("href"));
-    if (destino) {
-      destino.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+const revealOnScroll = () => {
+  const triggerBottom = window.innerHeight * 0.85;
+  animatedElements.forEach((el) => {
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < triggerBottom) {
+      el.classList.add("show");
     }
   });
-});
+};
 
-/* --- VALIDACIÓN SIMPLE DE FORMULARIO --- */
-const form = document.querySelector("form");
-if (form) {
-  form.addEventListener("submit", function (e) {
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+// ======== POPUP DE CONTACTO ==========
+const btn = document.getElementById('btnContctame');
+const popup = document.getElementById('popup-contacto');
+const closeBtn = document.getElementById('close-popup');
+
+if (btn && popup) {
+  btn.onclick = function(e) {
     e.preventDefault();
-
-    const nombre = form.querySelector('input[name="nombre"]');
-    const correo = form.querySelector('input[name="correo"]');
-    const mensaje = form.querySelector('textarea[name="mensaje"]');
-
-    if (!nombre.value || !correo.value || !mensaje.value) {
-      alert("Por favor, completa todos los campos antes de enviar.");
-    } else {
-      alert("¡Gracias! Tu información ha sido enviada correctamente.");
-      form.reset();
-    }
-  });
+    popup.style.display = 'flex';
+  };
 }
+
+if (closeBtn && popup) {
+  closeBtn.onclick = function() {
+    popup.style.display = 'none';
+  };
+}
+
+

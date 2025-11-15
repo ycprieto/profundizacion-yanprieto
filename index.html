@@ -3,123 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingeniería de Software - UCompensar</title>
-  <meta name="description" content="Maqueta académica del programa de Ingeniería de Software basada en el sitio de UCompensar.">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Yan Carlos Prieto Hernández | Portafolio Profesional</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-  <!-- ======= ENCABEZADO ======= -->
-  <header class="encabezado">
-    <div class="logo">
-      <img src="assets/imagenes/main-logo.svg" alt="Logo UCompensar">
-      <!--h1>Ingeniería de Software</h1-->
+  <!-- ===== Encabezado ===== -->
+  <header class="hero-section fade-up">
+    <div class="container">
+      <h1>Yan Carlos Prieto Hernández<br>Coordinador Regional de Soporte</h1>
+      <p>"Impulsando soluciones tecnológicas eficientes y un soporte de calidad para equipos y usuarios"</p>
     </div>
-    <button id="menu-toggle" class="menu-toggle">☰</button>
-    <nav class="nav">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#perfil">Perfil</a></li>
-        <li><a href="#plan">Plan de estudios</a></li>
-        <li><a href="#formulario">Inscríbete</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    <button id="btnContctame" class="btnContctame">Contáctame</button>
   </header>
+  <!-- Popup oculto en index.html -->
+<div id="popup-contacto" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <span id="close-popup" style="float:right; cursor:pointer;">&times;</span>
+    <form action="mailto:ycprieto@ucompensar.edu.co" method="post" enctype="text/plain">
+          <label>Nombre:</label>
+          <input type="text" name="nombre" required>
 
-  <!-- ======= SECCIÓN HERO ======= -->
-  <section id="inicio" class="hero">
-    <div class="hero-texto">
-      <h2>Programa de Ingeniería de Software</h2>
-      <p>Desarrolla soluciones tecnológicas que transformen el mundo digital con una formación integral y orientada al futuro.</p>
-      <a href="#formulario" class="btn">Inscríbete Aquí</a>
-    </div>
-  </section>
+          <label>Correo electrónico:</label>
+          <input type="email" name="correo" required>
 
-  <!-- ======= SECCIÓN DESCRIPCIÓN ======= -->
-  <section class="descripcion">
-    <div class="contenido">
-      <h2>Sobre el Programa</h2>
-      <p>La Ingeniería de Software forma profesionales con capacidades analíticas, creativas y técnicas para el diseño, desarrollo e implementación de sistemas informáticos. Este programa combina fundamentos de programación, bases de datos, ingeniería de requerimientos, arquitectura de software y metodologías ágiles.</p>
-    </div>
-    <div class="imagen">
-      <img src="assets/imagenes/Ingenieria-de-Software-Perfil-interna-scaled.webp" alt="Estudiantes de ingeniería de software">
-    </div>
-  </section>
+          <label>Mensaje:</label>
+          <textarea name="mensaje" rows="5" required></textarea>
 
-  <!-- ======= SECCIÓN PERFIL PROFESIONAL ======= -->
-  <section id="perfil" class="perfil">
-    <h2>Perfil Profesional</h2>
-    <p>El ingeniero de software podrá desempeñarse en el desarrollo de aplicaciones web, móviles y empresariales; administración de proyectos tecnológicos; análisis de datos; automatización de procesos; y diseño de soluciones en la nube, con un enfoque ético y sostenible.</p>
-  </section>
-
-  <!-- ======= SECCIÓN PLAN DE ESTUDIOS ======= -->
-  <section id="plan" class="plan">
-    <h2>Plan de Estudios</h2>
-    <div class="contenedor-plan">
-      <div class="bloque">
-        <h3>Primer Ciclo</h3>
-        <ul>
-          <li>Fundamentos de Programación</li>
-          <li>Matemáticas Discretas</li>
-          <li>Introducción a la Ingeniería</li>
-        </ul>
-      </div>
-      <div class="bloque">
-        <h3>Segundo Ciclo</h3>
-        <ul>
-          <li>Programación Orientada a Objetos</li>
-          <li>Bases de Datos</li>
-          <li>Arquitectura de Computadores</li>
-        </ul>
-      </div>
-      <div class="bloque">
-        <h3>Tercer Ciclo</h3>
-        <ul>
-          <li>Ingeniería de Requerimientos</li>
-          <li>Desarrollo Web</li>
-          <li>Metodologías Ágiles</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= SECCIÓN FORMULARIO ======= -->
-  <section id="formulario" class="formulario">
-    <div class="form-contenedor">
-      <div class="form-texto">
-        <h2>Solicita Información</h2>
-        <p>Déjanos tus datos y un asesor académico se comunicará contigo para brindarte más información sobre el programa.</p>
-      </div>
-      <div class="form-img">
-        <img src="assets/imagenes/formulario-ingenieria.webp" alt="Formulario Ingeniería">
-      </div>
-    </div>
-
-    <form class="form">
-      <input type="text" placeholder="Nombre completo" required>
-      <input type="email" placeholder="Correo electrónico" required>
-      <input type="tel" placeholder="Número de contacto" required>
-      <select required>
-        <option value="">Programa de interés</option>
-        <option value="software">Ingeniería de Software</option>
-        <option value="sistemas">Ingeniería de Sistemas</option>
-      </select>
-      <button type="submit" class="btn">Enviar Solicitud</button>
+          <button type="submit" class="btnContctame">Enviar</button>
     </form>
-  </section>
+  </div>
+</div>
 
-  <!-- ======= PIE DE PÁGINA ======= -->
-  <footer id="contacto" class="footer">
-    <p>&copy; 2025 Fundación Universitaria Compensar. Maqueta académica creada por Yan Carlos Prieto.</p>
-    <div class="redes">
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">YouTube</a>
+  <!-- ===== Menú de navegación ===== -->
+  <nav class="navbar fade-down">
+    <ul>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="formacion.html">Formación</a></li>
+      <li><a href="experiencia.html">Experiencia</a></li>
+      <li><a href="competencias.html">Competencias</a></li>
+    </ul>
+  </nav>
+  
+      <!-- ===== Experiencia profesional ===== -->
+  <section class="fade-up">
+    <div class="container">
+      <div class="card">
+        <p><h4>Coordinador de soporte con experiencia en gestión de infraestructura tecnológica y atención a usuarios en entornos corporativos internacionales. 
+          Apasionado por optimizar procesos, mejorar la experiencia del usuario y garantizar la continuidad operativa.</h4></p>
+      </div>
     </div>
+  </section>
+  <!-- Sección de Logros Destacados -->
+<section class="fade-up">
+  <h2>Logros Destacados</h2>
+  <div class="container">
+    <div class="card">
+      <h3>+8 Años</h3>
+      <p>de experiencia en soporte técnico y gestión de infraestructura TI.</p>
+    </div>
+    <div class="card">
+      <h3>+200</h3>
+      <p>usuarios atendidos a nivel regional con altos estándares de satisfacción.</p>
+    </div>
+    <div class="card">
+      <h3>100%</h3>
+      <p>de continuidad operativa en proyectos críticos de tecnología.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Herramientas y Tecnologías -->
+<section class="tecnologias">
+  <h2>Herramientas y Tecnologías</h2>
+
+  <!-- Bloque 1: Tecnologías y Lenguajes -->
+  <h3>Tecnologías y Lenguajes</h3>
+  <div class="grid-tecnologias">
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows Server">
+      <p>Windows Server</p>
+    </div>
+    <div class="tech-item">
+      <img src="C:\UCompensar\proyecto-transformacion\assets\img\MSO.png" alt="Microsoft 365" width="300">
+      <p>Microsoft 365</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" alt="PowerShell">
+      <p>PowerShell</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+      <p>Linux</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+      <p>Azure</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+      <p>Git</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+      <p>MySQL</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      <p>Python</p>
+    </div>
+  </div>
+
+  <!-- Bloque 2: Infraestructura y Gestión -->
+  <h3>Infraestructura y Gestión</h3>
+  <div class="grid-tecnologias">
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira Service Management">
+      <p>Jira Service Management</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="WSUS">
+      <p>WSUS</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Active Directory">
+      <p>Active Directory</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/599/599305.png" alt="NAS Synology">
+      <p>NAS / Synology</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="AnyDesk">
+      <p>AnyDesk / TeamViewer</p>
+    </div>
+    <div class="tech-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Office Admin Center">
+      <p>Office Admin Center</p>
+    </div>
+  </div>
+</section>
+
+  <!-- ===== Pie de página ===== -->
+  <footer class="fade-up">
+   <section class="logos">
+  <img src="C:\UCompensar\proyecto-transformacion\assets\img\certificaciones.png" alt="Certificaciones: Microsoft 365, Cisco, ITIL, Jira Service Management" width="600">
+  <img src="C:\UCompensar\proyecto-transformacion\assets\img\compensar.svg" alt="Certificaciones: Microsoft 365, Cisco, ITIL, Jira Service Management" width="300">
+  </section>
+    <p>© 2025 Yan Carlos Prieto Hernández | Bogotá, Colombia</p>
   </footer>
+
+
 
   <script src="js/script.js"></script>
 </body>
