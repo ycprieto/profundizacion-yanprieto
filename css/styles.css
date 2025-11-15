@@ -65,13 +65,6 @@ body {
   width: 100%;
   z-index: 1001;
 }
-/*.navbar {
-  background-color: var(--bg-alt);
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  border-bottom: 2px solid var(--accent);
-}*/
 
 .navbar ul {
   list-style: none;
@@ -333,3 +326,212 @@ footer {
   color: #ccc;
 }
 
+.hero-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+}
+
+.foto-perfil {
+  width: 260px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 50% / 40%;
+  /* ovalado vertical */
+  box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.btnContctame {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6600;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btnContctame:hover {
+  background: #e25800;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .foto-perfil {
+    width: 220px;
+    height: 280px;
+  }
+}
+/* Contenedor general */
+.logros-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 20px;
+  text-align: left !important; 
+}
+
+/* Contenido de texto */
+.logros-content {
+  flex: 1;
+}
+
+/* Imagen al lado derecho */
+.logros-img {
+  width: 350px;
+  border-radius: 50%; /* Ovalado / circular */
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Ajuste responsivo */
+@media (max-width: 900px) {
+  .logros-section {
+    flex-direction: column;
+    text-align: center !important;
+  }
+
+  .logros-img {
+    width: 250px;
+    margin-top: 20px;
+  }
+}
+.logros-section {
+  text-align: center !important;
+}
+/* --- Fondo translúcido para FORMACIÓN --- */
+.formacion {
+  position: relative;
+  padding: 4rem 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Imagen de fondo */
+  background-image: url("C:/UCompensar/proyecto-transformacion/assets/img/formacion.jpg");
+
+  /* Capa oscura translúcida encima */
+  overflow: hidden;
+}
+
+.formacion::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* oscuridad suave */
+  backdrop-filter: blur(3px);      /* efecto cristal helado */
+  z-index: 0;
+}
+
+/* El contenido va arriba del fondo */
+.formacion * {
+  position: relative;
+  z-index: 1;
+}
+/* --- Fondo translúcido para EXPERIENCIA --- */
+.experiencia {
+  position: relative;
+  padding: 4rem 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Imagen de fondo */
+  background-image: url("C:/UCompensar/proyecto-transformacion/assets/img/experiencia.jpg");
+
+  overflow: hidden;
+}
+
+.experiencia::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  
+  /* Oscurecimiento + transparencia */
+  background: rgba(0, 0, 0, 0.55);
+
+  /* Efecto de vidrio esmerilado */
+  backdrop-filter: blur(3px);
+  
+  z-index: 0;
+}
+
+/* El contenido debe ir encima del fondo */
+.experiencia * {
+  position: relative;
+  z-index: 1;
+}
+.experiencia-bg {
+  background: url("../assets/img/head.jpg") center/cover no-repeat;
+  padding: 80px 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+/* Capa oscura suave para mejorar la lectura */
+.experiencia-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);  /* oscurece ligeramente */
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.experiencia-bg .container {
+  position: relative;
+  z-index: 2; /* el contenido queda encima de la imagen */
+}
+.competencias-bg {
+  background: url("../assets/img/competencias.jpg") center/cover no-repeat;
+  padding: 80px 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+/* Capa oscura suave para contraste */
+.competencias-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.competencias-bg .competencias-container,
+.competencias-bg h2 {
+  position: relative;
+  z-index: 2; /* aseguro que el contenido quede encima del fondo */
+}

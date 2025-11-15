@@ -11,14 +11,17 @@
 
 <body>
   <!-- ===== Encabezado ===== -->
-  <header class="hero-section fade-up">
-    <div class="container">
+   <header class="hero-section fade-up">
+  <div class="hero-content">
+    <img class="foto-perfil" src="assets/img/yanprieto.jpeg" alt="Yan Carlos Prieto"/>
+
+    <div class="hero-text">
       <h1>Yan Carlos Prieto Hernández<br>Coordinador Regional de Soporte</h1>
       <p>"Impulsando soluciones tecnológicas eficientes y un soporte de calidad para equipos y usuarios"</p>
+      <button id="btnContctame" class="btnContctame">Contáctame</button>
     </div>
-    <button id="btnContctame" class="btnContctame">Contáctame</button>
+  </div>
   </header>
-  <!-- Popup oculto en index.html -->
 <div id="popup-contacto" class="popup-overlay" style="display:none;">
   <div class="popup-content">
     <span id="close-popup" style="float:right; cursor:pointer;">&times;</span>
@@ -48,7 +51,7 @@
   </nav>
   
       <!-- ===== Experiencia profesional ===== -->
-  <section class="fade-up">
+  <section class="fade-up experiencia-bg">
     <div class="container">
       <div class="card">
         <p><h4>Coordinador de soporte con experiencia en gestión de infraestructura tecnológica y atención a usuarios en entornos corporativos internacionales. 
@@ -56,23 +59,36 @@
       </div>
     </div>
   </section>
-  <!-- Sección de Logros Destacados -->
-<section class="fade-up">
-  <h2>Logros Destacados</h2>
-  <div class="container">
-    <div class="card">
-      <h3>+8 Años</h3>
-      <p>de experiencia en soporte técnico y gestión de infraestructura TI.</p>
-    </div>
-    <div class="card">
-      <h3>+200</h3>
-      <p>usuarios atendidos a nivel regional con altos estándares de satisfacción.</p>
-    </div>
-    <div class="card">
-      <h3>100%</h3>
-      <p>de continuidad operativa en proyectos críticos de tecnología.</p>
+<!-- Sección de Logros Destacados -->
+<section class="fade-up logros-section">
+  
+  <!-- Contenido del texto -->
+  <div class="logros-content">
+    <h2>Logros Destacados</h2>
+    <div class="container">
+      <div class="card">
+        <h3>+8 Años</h3>
+        <p>de experiencia en soporte técnico y gestión de infraestructura TI.</p>
+      </div>
+
+      <div class="card">
+        <h3>+200</h3>
+        <p>usuarios atendidos a nivel regional con altos estándares de satisfacción.</p>
+      </div>
+
+      <div class="card">
+        <h3>100%</h3>
+        <p>de continuidad operativa en proyectos críticos de tecnología.</p>
+      </div>
     </div>
   </div>
+
+  <!-- Imagen al costado derecho -->
+  <img
+    src="C:\UCompensar\proyecto-transformacion\assets\img\pc.jpg"
+    alt="Certificaciones: Microsoft 365, Cisco, ITIL, Jira Service Management"
+    class="logros-img"
+  >
 </section>
 
 <!-- Sección de Herramientas y Tecnologías -->
